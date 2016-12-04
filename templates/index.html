@@ -1,0 +1,15 @@
+{% extends "basic.html" %}
+{% block body %}
+  {% for entry in entries %}
+    <div class="entry">
+      <div class="item">
+        <div class="index">{{loop.index}}.</div>
+        <a href="/vote?id={{ entry.id }}&how=up&auth=18f797317989ac73e90805daf94472c652a4315c&goto=news"><img src="https://news.ycombinator.com/grayarrow.gif"></a>
+      </div>
+      <div class="content">
+        <div class="title"><a href="{{ entry.url }}">{{ entry.title }}</a> <span class="site">(<a href="/from?site=todo">{{ entry.url }}</a>)</span></div>
+        <div class="info">{{ entry.points }} points by <a href="/user?id={{ users[entry.user].username }}">{{ users[entry.user].username }}</a> x hours ago | flag | hide | <a href="/item?id={{ comment_count[entry.id] }}">{{ comment_count[entry.id] }} comments</a></div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

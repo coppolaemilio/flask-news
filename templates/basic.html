@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>Flask News</title>
+  <meta name="description" content="A HN clone coded in flask">
+  <meta name="author" content="Emilio Coppola">
+
+  <link rel="stylesheet" href="/static/css/reset.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <section class="page">
+    <nav>
+      <h1><a href="/">Flask News</a></h1> <a href="newest">new</a> | <a href="threads?id=coppolaemilio">threads</a> | <a href="newcomments">comments</a> | <a href="show">show</a> | <a href="ask">ask</a> | <a href="jobs">jobs</a> | <a href="submit">submit</a>
+    </nav>
+    <div class="entries">
+      {% block body %}{% endblock %}
+    </div>
+    <footer>
+      <span class="yclinks"><a href="newsguidelines.html">Guidelines</a>
+        | <a href="newsfaq.html">FAQ</a>
+        | <a href="mailto:hn@ycombinator.com">Support</a>
+        | <a href="https://github.com/HackerNews/API">API</a>
+        | <a href="security.html">Security</a>
+        | <a href="lists">Lists</a>
+        | <a href="bookmarklet.html">Bookmarklet</a>
+        | <a href="dmca.html">DMCA</a>
+        | <a href="http://www.ycombinator.com/apply/">Apply to YC</a>
+        | <a href="mailto:hn@ycombinator.com">Contact</a></span>
+    </footer>
+  </section>
+
+  <script src="/static/javascript/main.js"></script>
+</body>
+</html>
